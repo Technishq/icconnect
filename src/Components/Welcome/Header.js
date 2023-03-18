@@ -20,7 +20,7 @@ const Header = ({ hidden }) => {
               <span>About</span>
             </Link>
 
-            <Link to="/" className="icon-div">
+            <Link to="/explore" className="icon-div">
               <i className="fa-solid fa-bullhorn"></i>
               <span>Announcements</span>
             </Link>

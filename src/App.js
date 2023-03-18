@@ -11,6 +11,10 @@ import ForgetPass from "./Pages/ForgetPass";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Post from "./Pages/Post";
+import About from "./Pages/About";
+import Explore from "./Pages/Explore";
+
+
 
 
 function App() {
@@ -35,6 +39,9 @@ function App() {
           <Route path="/feed" element={<Feed />} />
           <Route path="/forget-pass" element={<ForgetPass />} />
           <Route path="/join-now" element={<Register />}/>
+          <Route path="/aboutus" element={<About />}/>
+          <Route path="/explore" element={<Explore />}/>
+
           <Route path="/post" element={<Post />}/>
           <Route path="/login" element={<Login />} />
         </Routes>

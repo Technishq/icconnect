@@ -167,14 +167,13 @@ const MobileHeader = () => {
           <i className="fa-solid fa-house-chimney" />
           <span>home</span>
         </Link>
-        
 
         <button
           className="icon-div"
-          onClick={(e) => updateFeed(e, "Connections")}
+          onClick={(e) => updateFeed(e, "my network")}
         >
           <i className="fa-solid fa-user-group" />
-          <span>Connections</span>
+          <span>my network</span>
         </button>
 
         <button
@@ -196,7 +195,7 @@ const MobileHeader = () => {
           <span>notifications</span>
         </button>
 
-        <button className="icon-div" onClick={(e) => updateFeed(e, "explore")}>
+        <button className="icon-div" onClick={(e) => updateFeed(e, "jobs")}>
           <i className="fa-solid fa-chalkboard-user" />
           <span>Explore</span>
         </button>
@@ -216,4 +215,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header;
