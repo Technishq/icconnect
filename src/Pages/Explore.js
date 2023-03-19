@@ -1,7 +1,8 @@
 // Libraries
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-
+import { Container, Logo, SearchContainer } from "./Styles/HeaderStyled";
+import { SearchBox, NavLink, Divider } from "./Styles/HeaderStyled";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { changeView } from "../app/slice/feedSlice";
@@ -84,7 +85,60 @@ const MobileHeader = () => {
 
   return (
     <>
+      <SearchContainer>
+        <button className="icon-div profile">
+          <img
+            src={(userInfo.profile || PROFILE_IMG)+"?tr=w-100,h-100"}
+            alt=""
+            onClick={userUpdate}
+          />
+        </button>
 
+        <SearchBox>
+          <i className="fa-solid fa-magnifying-glass" />
+          <input placeholder="Search" type="text" />
+        </SearchBox>
+
+        <Link className="message" onClick={activate} to="/post">
+          <i className="fa-solid fa-check-to-slot" />
+        </Link>
+      </SearchContainer>
+
+      <NavLink>
+        
+
+        <button
+          className="icon-div"
+          onClick={(e) => updateFeed(e, "my network")}
+        >
+          <i className="fa-solid fa-user-group" />
+          <span>my network</span>
+        </button>
+
+        <button
+          className="icon-div"
+          onClick={(e) => {
+            updateFeed(e, "post");
+            viewSharing();
+          }}
+        >
+          <i className="fa-solid fa-square-plus" />
+          <span>post</span>
+        </button>
+
+        <button
+          className="icon-div"
+          onClick={(e) => updateFeed(e, "notifications")}
+        >
+          <i className="fa-solid fa-bell" />
+          <span>notifications</span>
+        </button>
+
+        <button className="icon-div" onClick={(e) => updateFeed(e, "jobs")}>
+          <i className="fa-solid fa-chalkboard-user" />
+          <span>Explore</span>
+        </button>
+      </NavLink>
     </>
   );
 };
@@ -93,7 +147,11 @@ const MobileHeader = () => {
 const Header = () => {
   const width = useSelector((state) => state.width);
   const userToken = useSelector((state) => state.user?.token);
-
+  return (
+    <Container>
+      {width > 529 ? <WebHeader token={userToken} /> : <MobileHeader />}
+    </Container>
+  );
 };
 
 export default Header;

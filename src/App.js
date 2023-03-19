@@ -13,6 +13,7 @@ import Login from "./Pages/Login";
 import Post from "./Pages/Post";
 import About from "./Pages/About";
 import Explore from "./Pages/Explore";
+import Contact from "./Pages/Contact";
 
 
 
@@ -40,6 +41,8 @@ function App() {
           <Route path="/forget-pass" element={<ForgetPass />} />
           <Route path="/join-now" element={<Register />}/>
           <Route path="/aboutus" element={<About />}/>
+          <Route path="/contact" element={<Contact />}/>
+
           <Route path="/explore" element={<Explore />}/>
 
           <Route path="/post" element={<Post />}/>

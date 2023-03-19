@@ -15,23 +15,23 @@ const Header = ({ hidden }) => {
       <NavLink>
         {!hidden && (
           <>
-            <Link to="/" className="icon-div">
+            <Link to="/aboutus" className="icon-div">
               <i className="fa-solid fa-info"></i>
               <span>About</span>
             </Link>
 
-            <Link to="/explore" className="icon-div">
+            <Link to="/login" className="icon-div">
               <i className="fa-solid fa-bullhorn"></i>
               <span>Announcements</span>
             </Link>
 
-            <Link to="/" className="icon-div">
+            <Link to="/login" className="icon-div">
               <i className="fa-solid fa-chalkboard-user"></i>
               <span>Explore</span>
             </Link>
 
            
-            <Link to="/" className="icon-div">
+            <Link to="/contact" className="icon-div">
               <i className="fa-solid fa-user-group"></i>
               <span>Contact</span>
             </Link>
